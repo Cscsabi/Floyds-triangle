@@ -5,40 +5,38 @@ import java.util.ArrayList;
 
 public class CalculteFloyd {
     public void triangle(int N) throws IOException {
-        WriteFile data = new WriteFile("Floyd.txt", true);
-        ArrayList<Integer> dataArrayList = new ArrayList<Integer>();
-        int i = 1;
-        int j = 1;
-        int k = 1;
-        while (j <= N) {
-            dataArrayList.add(i);
-            if (k == j) {
+        WriteFile data = new WriteFile("Floyd.txt");
+        ArrayList<Integer> dataArrayList = new ArrayList<>();
+        int currentNumber = 1;
+        int rows = 1;
+        int breakLine = 1;
+        while (rows <= N) {
+            dataArrayList.add(currentNumber);
+            if (breakLine == rows) {
                 dataArrayList.add(0);
-                if(j == N) {
-                    System.out.print(i);
+                if(rows == N) {
+                    System.out.print(currentNumber);
+                } else {
+                    System.out.println(currentNumber);
                 }
-                else {
-                    System.out.println(i);
-                }
-                i++;
-                j++;
-                k = 1;
+                currentNumber++;
+                rows++;
+                breakLine = 1;
             } else {
-                System.out.print(i + " ");
-                i++;
-                k++;
+                System.out.print(currentNumber + " ");
+                currentNumber++;
+                breakLine++;
             }
         }
         data.writeToFile(dataArrayList);
 
         int sum = 0;
 
-        for(int l = 0; l < dataArrayList.size(); l++) {
-            if(dataArrayList.get(l) != 0) {
-                sum += dataArrayList.get(l);
+        for(int i = 0; i < dataArrayList.size(); i++) {
+            if(dataArrayList.get(i) != 0) {
+                sum += dataArrayList.get(i);
             }
         }
-
         System.out.print(" " + sum);
     }
 }

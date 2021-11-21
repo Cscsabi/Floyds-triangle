@@ -8,16 +8,9 @@ import java.util.ArrayList;
 
 public class WriteFile {
     private String path;
-    private boolean append_to_file = false;
 
-
-    public WriteFile(String file_path) throws IOException {
+    public WriteFile(String file_path) {
         path = file_path;
-    }
-
-    public WriteFile(String file_path, boolean append_value) throws IOException {
-        path = file_path;
-        append_to_file = append_value;
     }
 
     public void writeToFile(ArrayList<Integer> data) throws IOException {

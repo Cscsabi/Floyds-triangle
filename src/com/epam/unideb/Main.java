@@ -1,7 +1,6 @@
 package com.epam.unideb;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Main {
 
