@@ -3,7 +3,7 @@ package com.epam.unideb;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class CalculteFloyd {
+public class CalculateFloyd {
     public void triangle(int N) throws IOException {
         WriteFile data = new WriteFile("Floyd.txt");
         ArrayList<Integer> dataArrayList = new ArrayList<>();

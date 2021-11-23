@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         UserInput userInput = new UserInput();
-        CalculteFloyd calculteFloyd = new CalculteFloyd();
+        CalculateFloyd calculteFloyd = new CalculateFloyd();
 
         int rows = userInput.input();
 
