@@ -6,10 +6,10 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         UserInput userInput = new UserInput();
-        CalculateFloyd calculteFloyd = new CalculateFloyd();
+        CalculateFloyd calculateFloyd = new CalculateFloyd();
 
         int rows = userInput.input();
 
-        calculteFloyd.triangle(rows);
+        calculateFloyd.triangle(rows);
     }
 }
